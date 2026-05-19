@@ -1,0 +1,14 @@
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\bin\Release\War3 Units Editor.exe.config
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\bin\Release\War3 Units Editor.exe
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\bin\Release\War3 Units Editor.pdb
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.AssemblyReference.cache
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.SuggestedBindingRedirects.cache
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3_Units_Editor.Form1.resources
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3_Units_Editor.Properties.Resources.resources
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.GenerateResource.cache
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.CoreCompileInputs.cache
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3 Units Editor.exe
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3 Units Editor.pdb
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\bin\Release\IniParser.dll
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\bin\Release\IniParser.xml
+C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.CopyComplete
