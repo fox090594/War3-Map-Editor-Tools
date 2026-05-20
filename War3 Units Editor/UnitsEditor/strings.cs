@@ -48,5 +48,22 @@ namespace War3_Map_Editor_Tools.UnitsEditor
                 catch { }
             }
         }
+        public static string GetFromStrings(string index, string value)
+        {
+            string result = "";
+            for (int i = 0; i < strings.files.Length; i++)
+            {
+                try
+                {
+                    string value1 = strings.Files[i][index][value];
+                    if (value1.Length > 1)
+                    {
+                        result = value1;
+                    }
+                }
+                catch { }
+            }
+            return result;
+        }
     }
 }

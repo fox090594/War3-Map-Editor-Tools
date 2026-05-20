@@ -51,35 +51,17 @@ namespace War3_Map_Editor_Tools.UnitsEditor
                             }
                             c.id = Int32.Parse(fields[1].Replace("Y", ""));
                             c.Index = fields[3].Replace("K", "").Replace('"', ' ').Replace(" ", "");
-                            c.Name = GetFromStrings(c.Index, "Name");
-                            c.Ubertip = GetFromStrings(c.Index, "Ubertip");
-                            c.Researchtip = GetFromStrings(c.Index, "Researchtip");
-                            c.Researchubertip = GetFromStrings(c.Index, "Researchubertip");
-                            c.Tip = GetFromStrings(c.Index, "Tip");
-                            c.Researchhotkey = GetFromStrings(c.Index, "Researchhotkey");
-                            c.Hotkey = GetFromStrings(c.Index, "Hotkey");
+                            c.Name = strings.GetFromStrings(c.Index, "Name");
+                            c.Ubertip = strings.GetFromStrings(c.Index, "Ubertip");
+                            c.Researchtip = strings.GetFromStrings(c.Index, "Researchtip");
+                            c.Researchubertip = strings.GetFromStrings(c.Index, "Researchubertip");
+                            c.Tip = strings.GetFromStrings(c.Index, "Tip");
+                            c.Researchhotkey = strings.GetFromStrings(c.Index, "Researchhotkey");
+                            c.Hotkey = strings.GetFromStrings(c.Index, "Hotkey");
                         }
                     }
                 }
             }
-        }
-
-        public static string GetFromStrings(string index, string value)
-        {
-            string result = "";
-            for(int i = 0; i  < strings.files.Length; i++) 
-            {
-                try
-                {
-                    string value1 = strings.Files[i][index][value];
-                    if (value1.Length > 1)
-                    {
-                        result = value1;
-                    }
-                }
-                catch { }
-            }
-            return result;
         }
     }
 }

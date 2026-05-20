@@ -46,12 +46,20 @@ namespace War3_Map_Editor_Tools
             listView2.Items.Clear();
             UnitsEditor.strings.ReadFiles(folderPath);
             UnitsEditor.UnitData.Load(folderPath);
-            for (int i = 1; i < UnitsEditor.UnitData.List.Count + 1; i++)
+            UnitsEditor.ItemData.Load(folderPath);
+            for (int i1 = 1; i1 < UnitsEditor.UnitData.List.Count + 1; i1++)
             {
-                ListViewItem item = new ListViewItem(UnitsEditor.UnitData.List[i].id.ToString());
-                item.SubItems.Add(UnitsEditor.UnitData.List[i].Index);
-                item.SubItems.Add(UnitsEditor.UnitData.List[i].Name);
+                ListViewItem item = new ListViewItem(UnitsEditor.UnitData.List[i1].id.ToString());
+                item.SubItems.Add(UnitsEditor.UnitData.List[i1].Index);
+                item.SubItems.Add(UnitsEditor.UnitData.List[i1].Name);
                 listView1.Items.Add(item);
+            }
+            for (int i2 = 1; i2 < UnitsEditor.ItemData.List.Count + 1; i2++)
+            {
+                ListViewItem item = new ListViewItem(UnitsEditor.ItemData.List[i2].id.ToString());
+                item.SubItems.Add(UnitsEditor.ItemData.List[i2].Index);
+                item.SubItems.Add(UnitsEditor.ItemData.List[i2].Name);
+                listView2.Items.Add(item);
             }
         }
 
