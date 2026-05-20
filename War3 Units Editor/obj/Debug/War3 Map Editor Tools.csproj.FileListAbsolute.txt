@@ -1,0 +1,13 @@
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Debug\War3 Units Editor.exe.config
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Debug\War3 Units Editor.exe
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Debug\War3 Units Editor.pdb
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Debug\IniParser.dll
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Debug\IniParser.xml
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Debug\War3 Map Editor Tools.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Debug\War3_Units_Editor.Form1.resources
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Debug\War3_Units_Editor.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Debug\War3 Map Editor Tools.csproj.GenerateResource.cache
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Debug\War3 Map Editor Tools.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Debug\War3 Map.CC48BB29.Up2Date
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Debug\War3 Units Editor.exe
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Debug\War3 Units Editor.pdb

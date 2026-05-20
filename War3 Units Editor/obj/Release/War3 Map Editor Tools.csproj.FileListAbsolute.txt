@@ -12,3 +12,16 @@ C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\
 C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\bin\Release\IniParser.dll
 C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\bin\Release\IniParser.xml
 C:\Users\sereg\OneDrive\Документы\Visual Studio 2022\War3 Units Editor\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.CopyComplete
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Release\IniParser.dll
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Release\IniParser.xml
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.GenerateResource.cache
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Release\War3 Map Editor Tools.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Release\War3 Map.CC48BB29.Up2Date
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Release\War3_Map_Editor_Tools.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Release\War3_Map_Editor_Tools.Form1.resources
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Release\War3 Map Editor Tools.exe.config
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Release\War3 Map Editor Tools.exe
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\bin\Release\War3 Map Editor Tools.pdb
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Release\War3 Map Editor Tools.exe
+C:\Users\User\Documents\Visual Studio 2022\War3-Map-Editor-Tools\War3 Units Editor\obj\Release\War3 Map Editor Tools.pdb

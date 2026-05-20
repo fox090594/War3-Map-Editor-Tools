@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace War3_Units_Editor
+namespace War3_Map_Editor_Tools
 {
     internal static class Program
     {

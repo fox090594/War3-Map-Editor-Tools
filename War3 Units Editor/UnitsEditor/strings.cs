@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace War3_Units_Editor.UnitsEditor
+namespace War3_Map_Editor_Tools.UnitsEditor
 {
     public class strings
     {
@@ -43,8 +43,7 @@ namespace War3_Units_Editor.UnitsEditor
             {
                 try
                 {
-                    var parser = new FileIniDataParser();
-                    Files[i] = new FileIniDataParser().ReadFile(path + "\\" + files[i] + ".txt");
+                    Files[i] = new FileIniDataParser().ReadFile(path + "\\" + files[i] + ".txt",Encoding.UTF8);
                 }
                 catch { }
             }

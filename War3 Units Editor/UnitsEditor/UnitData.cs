@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using IniParser;
 using IniParser.Model;
 
-namespace War3_Units_Editor.UnitsEditor
+namespace War3_Map_Editor_Tools.UnitsEditor
 {
     public class UnitData
     {
@@ -34,7 +34,6 @@ namespace War3_Units_Editor.UnitsEditor
                 bool Add = false;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    // SYLK records are semicolon-delimited
                     string[] fields = line.Split(';');
 
                     if (fields.Length > 0 && fields[0].StartsWith("C"))
