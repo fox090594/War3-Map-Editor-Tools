@@ -4,27 +4,25 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static War3_Map_Editor_Tools.UnitsEditor.UnitData;
 
 namespace War3_Map_Editor_Tools.UnitsEditor
 {
-    public class ItemData
+    public class AbilityBuffData
     {
-        public static Dictionary<int, Item> List = new Dictionary<int, Item>();
-        public class Item
+        public static Dictionary<int, AbilityBuff> List = new Dictionary<int, AbilityBuff>();
+        public class AbilityBuff
         {
             public int id;
             public string Index;
-            public string Name;
-            public string Ubertip;
-            public string Description;
+            public string Bufftip;
+            public string Buffubertip;
         }
         public static void Load(string path)
         {
-            using (var reader = new StreamReader(path + "\\ItemData.slk", System.Text.Encoding.ASCII))
+            using (var reader = new StreamReader(path + "\\AbilityBuffData.slk", System.Text.Encoding.ASCII))
             {
                 string line;
-                Item c = new Item();
+                AbilityBuff c = new AbilityBuff();
                 bool Add = false;
                 while ((line = reader.ReadLine()) != null)
                 {
@@ -37,7 +35,7 @@ namespace War3_Map_Editor_Tools.UnitsEditor
                             if (Add == true)
                             {
                                 List.Add(c.id, c);
-                                c = new Item();
+                                c = new AbilityBuff();
                             }
                             if (Add == false)
                             {
@@ -45,9 +43,10 @@ namespace War3_Map_Editor_Tools.UnitsEditor
                             }
                             c.id = Int32.Parse(fields[1].Replace("Y", ""));
                             c.Index = fields[3].Replace("K", "").Replace('"', ' ').Replace(" ", "");
-                            c.Name = strings.GetFromStrings(c.Index, "Name");
-                            c.Ubertip = strings.GetFromStrings(c.Index, "Ubertip");
-                            c.Description = strings.GetFromStrings(c.Index, "Description");
+                            c.Bufftip = strings.GetFromStrings(c.Index, "Bufftip");
+                            c.Buffubertip = strings.GetFromStrings(c.Index, "Buffubertip");
+                            //c.Ubertip = strings.GetFromStrings(c.Index, "Ubertip");
+                            //c.Description = strings.GetFromStrings(c.Index, "Description");
                             //c.Researchtip = strings.GetFromStrings(c.Index, "Researchtip");
                             //c.Researchubertip = strings.GetFromStrings(c.Index, "Researchubertip");
                             //c.Tip = strings.GetFromStrings(c.Index, "Tip");
