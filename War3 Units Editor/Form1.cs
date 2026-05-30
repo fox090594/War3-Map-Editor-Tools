@@ -9,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,22 +24,34 @@ namespace War3_Map_Editor_Tools
             InitializeComponent();
         }
 
-        private string folderPath = "";
-
-        private void button1_Click(object sender, EventArgs e)
+        private void SelectFolder()
         {
             using (var dialog = new FolderBrowserDialog())
             {
                 dialog.Description = "Select the output folder";
                 //dialog.UseDescriptionForTitle = true;
-                dialog.SelectedPath = @"C:\"; // Sets the initial directory
+                if(Config.folderPath.Length > 3)
+                {
+                    dialog.SelectedPath = Config.folderPath;
+                }
+                else
+                {
+                    dialog.SelectedPath = @"C:\";
+                }
 
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    folderPath = dialog.SelectedPath;
-                    textBox1.Text = folderPath;
+                    Config.folderPath = dialog.SelectedPath;
+                    textBox1.Text = Config.folderPath;
+                    textBox7.Text = Config.folderPath;
+                    Config.Write();
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SelectFolder();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,16 +65,16 @@ namespace War3_Map_Editor_Tools
             listView7.Items.Clear();
             listView8.Items.Clear();
             listView9.Items.Clear();
-            UnitsEditor.strings.ReadFiles(folderPath);
-            UnitsEditor.UnitData.Load(folderPath);
-            UnitsEditor.ItemData.Load(folderPath);
-            UnitsEditor.UpgradeData.Load(folderPath);
-            UnitsEditor.UnitAbilities.Load(folderPath);
-            UnitsEditor.AbilityBuffData.Load(folderPath);
-            UnitsEditor.UnitWeapons.Load(folderPath);
-            UnitsEditor.UnitUI.Load(folderPath);
-            UnitsEditor.UnitBalance.Load(folderPath);
-            UnitsEditor.AbilityData.Load(folderPath);
+            UnitsEditor.strings.ReadFiles(Config.folderPath + "\\Units");
+            UnitsEditor.UnitData.Load(Config.folderPath + "\\Units");
+            UnitsEditor.ItemData.Load(Config.folderPath + "\\Units");
+            UnitsEditor.UpgradeData.Load(Config.folderPath + "\\Units");
+            UnitsEditor.UnitAbilities.Load(Config.folderPath + "\\Units");
+            UnitsEditor.AbilityBuffData.Load(Config.folderPath + "\\Units");
+            UnitsEditor.UnitWeapons.Load(Config.folderPath + "\\Units");
+            UnitsEditor.UnitUI.Load(Config.folderPath + "\\Units");
+            UnitsEditor.UnitBalance.Load(Config.folderPath + "\\Units");
+            UnitsEditor.AbilityData.Load(Config.folderPath + "\\Units");
             foreach (int i1 in UnitsEditor.UnitData.List.Keys)
             //for (int i1 = 1; i1 < UnitsEditor.UnitData.List.Count + 1; i1++)
             {
@@ -131,6 +144,7 @@ namespace War3_Map_Editor_Tools
 
         private void button3_Click(object sender, EventArgs e)
         {
+            bool NotError = true;
             for (int i = 0; i < UnitsEditor.strings.files.Length; i++)
             {
                 var parser = new FileIniDataParser();
@@ -138,14 +152,19 @@ namespace War3_Map_Editor_Tools
                 //string value1 = data["xxxx"]["xxxx"];// IniParser.Exceptions.ParsingException
                 try
                 {
-                    IniData data = parser.ReadFile(folderPath + "\\" + UnitsEditor.strings.files[i] + ".txt");
+                    IniData data = parser.ReadFile(Config.folderPath + "\\Units\\" + UnitsEditor.strings.files[i] + ".txt");
                     string value1 = data["xxxx"]["xxxx"];
                 }
                 catch (Exception ex)
                 {
+                    NotError = false;
                     // Displays just the error description
                     MessageBox.Show(ex.ToString(), "Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            if (NotError)
+            {
+                MessageBox.Show("String files are OK!");
             }
         }
 
@@ -221,6 +240,175 @@ namespace War3_Map_Editor_Tools
                         writer.Write(BitConverter.GetBytes(Int32.Parse(textBox4.Text)));
                     }
                     MessageBox.Show("Done. Renamed w3x name is: " + Path.GetFileName(file));
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UnitsEditor.strings.MergeFiles(Config.folderPath + "\\Units");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SelectFolder();
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            using (BinaryReader reader = new BinaryReader(File.Open(Config.folderPath + "\\war3map.w3a", FileMode.Open)))
+            {
+                int version = reader.ReadInt32();
+                int countTable = reader.ReadInt32();
+                for (int i1 = 0; i1 < countTable; i1++)
+                {
+                    string OriginalId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                    ListViewItem item = new ListViewItem(OriginalId.ToString());
+                    string CustomId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                    int ModCount = reader.ReadInt32();
+                    item.SubItems.Add(ModCount.ToString());
+                    for (int i2 = 0; i2 < ModCount; i2++)
+                    {
+                        string ModId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                        int ModType = reader.ReadInt32();//0=int, 1=real, 2=unreal, 3=string
+                        int Level = reader.ReadInt32();
+                        int Column = reader.ReadInt32();
+                        string ModValue = ReadModificationValue(reader, ModType);
+                        string ObjectId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                    }
+                    listView10.Items.Add(item);
+                }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            uint dwordValue = UInt32.Parse(textBox9.Text); // Max DWORD value
+            string hexValue = dwordValue.ToString("X");
+            //byte[] bytes = Convert.FromHexString(hexValue);
+            //string asciiString = Encoding.ASCII.GetString(bytes);
+            textBox8.Text = HexToAscii(hexValue);//Reverse(HexToAscii(hexValue));
+        }
+
+        public static string ReadModificationValue(BinaryReader reader,int type)
+        {
+            string result = "";//0=int, 1=real, 2=unreal, 3=string
+            switch (type)
+            {
+                case 0:
+                    result = reader.ReadInt32().ToString();
+                    break;
+                case 1:
+                    result = reader.ReadSingle().ToString();
+                    break;
+                case 2:
+                    result = reader.ReadInt32().ToString();
+                    break;
+                case 3:
+                    result = reader.ReadString();
+                    break;
+            }
+            return result;
+        }
+        public static string GetIDfromwar3map(int input)
+        {
+            string hexValue = input.ToString("X");
+            return Reverse(HexToAscii(hexValue));
+        }
+        public static string HexToAscii(string hexString)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hexString.Length; i += 2)
+            {
+                // Get two characters, convert to base 16 (hex) byte, then to char
+                string hs = hexString.Substring(i, 2);
+                sb.Append(Convert.ToChar(Convert.ToUInt32(hs, 16)));
+            }
+            return sb.ToString();
+        }
+        public static string Reverse(string text)
+        {
+            char[] cArray = text.ToCharArray();
+            string reverse = String.Empty;
+            for (int i = cArray.Length - 1; i > -1; i--)
+            {
+                reverse += cArray[i];
+            }
+            return reverse;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Config.Load();
+            textBox1.Text = Config.folderPath;
+            textBox7.Text = Config.folderPath;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            listView11.Items.Clear();
+            war3mapUnits.Load(Config.folderPath + "\\war3mapUnits.doo");
+            using (BinaryReader reader = new BinaryReader(File.Open(Config.folderPath + "\\war3mapUnits.doo", FileMode.Open)))
+            {
+                string fileID = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                int version = reader.ReadInt32();
+                int subversion = reader.ReadInt32();
+                int countTable = reader.ReadInt32();
+                for (int i1 = 0; i1 < countTable; i1++)
+                {
+                    string OriginalId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                    MessageBox.Show(OriginalId); 
+                    ListViewItem item = new ListViewItem(OriginalId.ToString());
+                    int variation = reader.ReadInt32();
+                    float PositionX = reader.ReadSingle();
+                    float PositionY = reader.ReadSingle();
+                    float PositionZ = reader.ReadSingle();
+                    float Rotation = reader.ReadSingle();
+                    float ScaleX = reader.ReadSingle();
+                    float ScaleY = reader.ReadSingle();
+                    float ScaleZ = reader.ReadSingle();
+                    //string OriginalId2 = Encoding.ASCII.GetString(reader.ReadBytes(4));//Reforged?
+                    byte Flags = reader.ReadByte();
+                    int PlayerNum = reader.ReadInt32();
+                    byte b1 = reader.ReadByte();
+                    byte b2 = reader.ReadByte();
+                    int Hit = reader.ReadInt32();
+                    int Mana = reader.ReadInt32();
+                    int DroppedItemSetPointer = reader.ReadInt32();
+                    int DropTableCount = reader.ReadInt32();
+                    //item.SubItems.Add(OriginalId2);
+                    for (int i2 = 0; i2 < DropTableCount; i2++)
+                    {
+                        string DropItemId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                        int DropChance = reader.ReadInt32();
+                    }
+                    int Gold = reader.ReadInt32();
+                    float TargetAcquisition = reader.ReadSingle();
+                    int HeroLevel = reader.ReadInt32();
+                    int Strength = reader.ReadInt32();
+                    int Agility = reader.ReadInt32();
+                    int Intelligence = reader.ReadInt32();
+                    int InvCount = reader.ReadInt32();
+                    for (int i3 = 0; i3 < DropTableCount; i3++)
+                    {
+                        int InvSlot = reader.ReadInt32();
+                        string InvItemId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                    }
+                    int ModAbilityCount = reader.ReadInt32();
+                    for (int i4 = 0; i4 < ModAbilityCount; i4++)
+                    {
+                        string AbilityId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                        int Autocast = reader.ReadInt32();
+                        int Abilitylevel = reader.ReadInt32();
+                    }
+                    int RandomFlag = reader.ReadInt32();
+                    reader.ReadBytes(4);//
+                    int UnitColor = reader.ReadInt32();
+                    int Waygate = reader.ReadInt32();
+                    int UnitId = reader.ReadInt32();
+                    MessageBox.Show(Gold.ToString());
+                    listView11.Items.Add(item);
                 }
             }
         }

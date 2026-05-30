@@ -47,6 +47,34 @@ namespace War3_Map_Editor_Tools.UnitsEditor
                 }
                 catch { }
             }
+            
+        }
+        public static void MergeFiles(string path)
+        {
+            FileIniDataParser parser = new FileIniDataParser();
+            IniData File = new IniData();
+            bool Error = false;
+            for (int i = 0; i < strings.files.Length; i++)
+            {
+                try
+                {
+                    IniData newFile = new FileIniDataParser().ReadFile(path + "\\" + files[i] + ".txt", Encoding.UTF8);
+                    File.Merge(newFile);
+
+                }
+                catch { Error = true; }
+            }
+
+            if (Error)
+            {
+                MessageBox.Show("Strings have Duplicate or Error");
+            }
+            else
+            {
+                string newpath = path + "\\New.txt";
+                parser.WriteFile(newpath, File, Encoding.UTF8);
+                MessageBox.Show("Strings are merged to: " + newpath);
+            }
         }
         public static string GetFromStrings(string index, string value)
         {

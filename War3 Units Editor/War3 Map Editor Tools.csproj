@@ -52,12 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IniFile.cs" />
     <Compile Include="IO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="UnitsEditor\UnitUI.cs" />
     <Compile Include="UnitsEditor\UnitWeapons.cs" />
     <Compile Include="UnitsEditor\UpgradeData.cs" />
+    <Compile Include="war3mapUnits.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="9.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Unitswar3map\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
