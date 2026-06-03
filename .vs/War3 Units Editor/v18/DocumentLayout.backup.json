@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|solutionrelative:War3 Units Editor\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|c:\\users\\user\\documents\\visual studio 2022\\war3-map-editor-tools\\war3 units editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|solutionrelative:war3 units editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|c:\\users\\user\\documents\\visual studio 2022\\war3-map-editor-tools\\war3 units editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\war3 units editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|solutionrelative:war3 units editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|c:\\users\\user\\documents\\visual studio 2022\\war3-map-editor-tools\\war3 units editor\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\war3 units editor\\war3mapunits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|solutionrelative:war3 units editor\\war3mapunits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\war3 units editor\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|solutionrelative:war3 units editor\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|c:\\users\\user\\documents\\visual studio 2022\\war3-map-editor-tools\\war3 units editor\\unitseditor\\strings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|solutionrelative:war3 units editor\\unitseditor\\strings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|c:\\users\\user\\documents\\visual studio 2022\\war3-map-editor-tools\\war3 units editor\\inifile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{961AC2D4-4A85-47D1-ADAA-66AC4644A007}|War3 Units Editor\\War3 Map Editor Tools.csproj|solutionrelative:war3 units editor\\inifile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,45 +26,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IniFile.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\IniFile.cs",
-              "RelativeDocumentMoniker": "War3 Units Editor\\IniFile.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\IniFile.cs",
-              "RelativeToolTip": "War3 Units Editor\\IniFile.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCIAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "war3mapUnits.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\war3mapUnits.cs",
+              "RelativeDocumentMoniker": "War3 Units Editor\\war3mapUnits.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\war3mapUnits.cs",
+              "RelativeToolTip": "War3 Units Editor\\war3mapUnits.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T07:48:10.874Z",
+              "WhenOpened": "2026-05-29T12:54:27.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "strings.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\UnitsEditor\\strings.cs",
-              "RelativeDocumentMoniker": "War3 Units Editor\\UnitsEditor\\strings.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\UnitsEditor\\strings.cs",
-              "RelativeToolTip": "War3 Units Editor\\UnitsEditor\\strings.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T13:52:08.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Config.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\Config.cs",
               "RelativeDocumentMoniker": "War3 Units Editor\\Config.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\Config.cs",
               "RelativeToolTip": "War3 Units Editor\\Config.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-28T10:26:22.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\Form1.cs",
+              "RelativeDocumentMoniker": "War3 Units Editor\\Form1.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\Form1.cs",
+              "RelativeToolTip": "War3 Units Editor\\Form1.cs",
+              "ViewState": "AgIAACsBAAAAAAAAAAAQwDIBAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T15:37:51.943Z",
               "EditorCaption": ""
             },
             {
@@ -82,19 +78,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-27T13:09:38.244Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\Form1.cs",
-              "RelativeDocumentMoniker": "War3 Units Editor\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\War3-Map-Editor-Tools\\War3 Units Editor\\Form1.cs",
-              "RelativeToolTip": "War3 Units Editor\\Form1.cs",
-              "ViewState": "AgIAAGsBAAAAAAAAAAAQwHoBAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T15:37:51.943Z",
-              "EditorCaption": ""
             }
           ]
         }

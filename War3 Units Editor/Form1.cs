@@ -14,6 +14,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using static War3_Map_Editor_Tools.war3mapUnits;
 
 namespace War3_Map_Editor_Tools
 {
@@ -30,7 +32,7 @@ namespace War3_Map_Editor_Tools
             {
                 dialog.Description = "Select the output folder";
                 //dialog.UseDescriptionForTitle = true;
-                if(Config.folderPath.Length > 3)
+                if (Config.folderPath.Length > 3)
                 {
                     dialog.SelectedPath = Config.folderPath;
                 }
@@ -106,7 +108,7 @@ namespace War3_Map_Editor_Tools
                 listView4.Items.Add(item);
             }
             foreach (int i5 in UnitsEditor.AbilityBuffData.List.Keys) //for (int i5 = 1; i5 < UnitsEditor.AbilityBuffData.List.Count + 1; i5++)
-            { 
+            {
                 ListViewItem item = new ListViewItem(UnitsEditor.AbilityBuffData.List[i5].id.ToString());
                 item.SubItems.Add(UnitsEditor.AbilityBuffData.List[i5].Index);
                 item.SubItems.Add(UnitsEditor.AbilityBuffData.List[i5].Bufftip);
@@ -252,12 +254,12 @@ namespace War3_Map_Editor_Tools
         private void button7_Click(object sender, EventArgs e)
         {
             SelectFolder();
-            
+
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            using (BinaryReader reader = new BinaryReader(File.Open(Config.folderPath + "\\war3map.w3a", FileMode.Open)))
+            using (BinaryReader reader = new BinaryReader(File.Open(Config.folderPath + "\\war3map.w3u", FileMode.Open)))
             {
                 int version = reader.ReadInt32();
                 int countTable = reader.ReadInt32();
@@ -267,18 +269,42 @@ namespace War3_Map_Editor_Tools
                     ListViewItem item = new ListViewItem(OriginalId.ToString());
                     string CustomId = Encoding.ASCII.GetString(reader.ReadBytes(4));
                     int ModCount = reader.ReadInt32();
-                    item.SubItems.Add(ModCount.ToString());
+                    item.SubItems.Add(CustomId.ToString());
                     for (int i2 = 0; i2 < ModCount; i2++)
                     {
                         string ModId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                        
                         int ModType = reader.ReadInt32();//0=int, 1=real, 2=unreal, 3=string
-                        int Level = reader.ReadInt32();
-                        int Column = reader.ReadInt32();
+                        //MessageBox.Show(ModId + " Type:" + ModType);
+                        //int Level = reader.ReadInt32();
+                        //int Column = reader.ReadInt32();
                         string ModValue = ReadModificationValue(reader, ModType);
                         string ObjectId = Encoding.ASCII.GetString(reader.ReadBytes(4));
                     }
                     listView10.Items.Add(item);
                 }
+                int countTable2 = reader.ReadInt32();
+                for (int i3 = 0; i3 < countTable2; i3++)
+                {
+                    string OriginalId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                    ListViewItem item = new ListViewItem(OriginalId.ToString());
+                    string CustomId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                    int ModCount = reader.ReadInt32();
+                    item.SubItems.Add(CustomId.ToString());
+                    for (int i4 = 0; i4 < ModCount; i4++)
+                    {
+                        string ModId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+
+                        int ModType = reader.ReadInt32();//0=int, 1=real, 2=unreal, 3=string
+                        //MessageBox.Show(ModId + " Type:" + ModType);
+                        //int Level = reader.ReadInt32();
+                        //int Column = reader.ReadInt32();
+                        string ModValue = ReadModificationValue(reader, ModType);
+                        string ObjectId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                    }
+                    listView10.Items.Add(item);
+                }
+                label42.Text = "Counts: " + "Standart: " + countTable + " Modded: " + countTable2;
             }
         }
 
@@ -291,7 +317,7 @@ namespace War3_Map_Editor_Tools
             textBox8.Text = HexToAscii(hexValue);//Reverse(HexToAscii(hexValue));
         }
 
-        public static string ReadModificationValue(BinaryReader reader,int type)
+        public static string ReadModificationValue(BinaryReader reader, int type)
         {
             string result = "";//0=int, 1=real, 2=unreal, 3=string
             switch (type)
@@ -306,7 +332,27 @@ namespace War3_Map_Editor_Tools
                     result = reader.ReadInt32().ToString();
                     break;
                 case 3:
-                    result = reader.ReadString();
+                    Dictionary<int, byte> Bytes = new Dictionary<int, byte>();
+                    while (true)
+                    {
+                        byte v = reader.ReadByte();
+                        if (v == 0x00)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Bytes.Add(Bytes.Count, v);
+                        }
+                    }
+                    byte[] bytes = new byte[Bytes.Count];
+                    for (int i = 0; i < Bytes.Count; i++)
+                    {
+                        bytes[i] = Bytes[i];
+                    }
+                    result = Encoding.UTF8.GetString(bytes);
+                    //result = reader.ReadString();//00 - end of strings
+                    //MessageBox.Show(result);
                     break;
             }
             return result;
@@ -348,69 +394,163 @@ namespace War3_Map_Editor_Tools
         private void button11_Click(object sender, EventArgs e)
         {
             listView11.Items.Clear();
+            war3mapUnits.List.Clear();
             war3mapUnits.Load(Config.folderPath + "\\war3mapUnits.doo");
-            using (BinaryReader reader = new BinaryReader(File.Open(Config.folderPath + "\\war3mapUnits.doo", FileMode.Open)))
+            foreach (int i1 in war3mapUnits.List.Keys)
             {
-                string fileID = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                int version = reader.ReadInt32();
-                int subversion = reader.ReadInt32();
-                int countTable = reader.ReadInt32();
-                for (int i1 = 0; i1 < countTable; i1++)
+                ListViewItem item = new ListViewItem(i1.ToString());
+                item.SubItems.Add(war3mapUnits.List[i1].OriginalId);
+                listView11.Items.Add(item);
+            }
+            listView12.Items.Clear();
+            listView13.Items.Clear();
+            listView14.Items.Clear();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(Reverse(textBox8.Text));
+            Int32 v = BitConverter.ToInt32(bytes, 0);
+            textBox9.Text = v.ToString();
+        }
+
+        private void listView11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listView12.Items.Clear();
+            listView13.Items.Clear();
+            listView14.Items.Clear();
+            if (this.listView11.Items.Count != 0)
+            {
+                if (this.listView11.SelectedItems.Count != 0)
                 {
-                    string OriginalId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                    MessageBox.Show(OriginalId); 
-                    ListViewItem item = new ListViewItem(OriginalId.ToString());
-                    int variation = reader.ReadInt32();
-                    float PositionX = reader.ReadSingle();
-                    float PositionY = reader.ReadSingle();
-                    float PositionZ = reader.ReadSingle();
-                    float Rotation = reader.ReadSingle();
-                    float ScaleX = reader.ReadSingle();
-                    float ScaleY = reader.ReadSingle();
-                    float ScaleZ = reader.ReadSingle();
-                    //string OriginalId2 = Encoding.ASCII.GetString(reader.ReadBytes(4));//Reforged?
-                    byte Flags = reader.ReadByte();
-                    int PlayerNum = reader.ReadInt32();
-                    byte b1 = reader.ReadByte();
-                    byte b2 = reader.ReadByte();
-                    int Hit = reader.ReadInt32();
-                    int Mana = reader.ReadInt32();
-                    int DroppedItemSetPointer = reader.ReadInt32();
-                    int DropTableCount = reader.ReadInt32();
-                    //item.SubItems.Add(OriginalId2);
-                    for (int i2 = 0; i2 < DropTableCount; i2++)
+                    int id = Int32.Parse(listView11.Items[this.listView11.SelectedItems[0].Index].SubItems[0].Text);
+                    //int id = this.listView11.SelectedItems[0].Index + 1;
+                    textBox10.Text = war3mapUnits.List[id].OriginalId;
+                    textBox11.Text = war3mapUnits.List[id].variation.ToString();
+                    textBox12.Text = war3mapUnits.List[id].PositionX.ToString();
+                    textBox13.Text = war3mapUnits.List[id].PositionY.ToString();
+                    textBox14.Text = war3mapUnits.List[id].PositionZ.ToString();
+                    textBox15.Text = war3mapUnits.List[id].Rotation.ToString();
+                    textBox16.Text = war3mapUnits.List[id].ScaleX.ToString();
+                    textBox17.Text = war3mapUnits.List[id].ScaleY.ToString();
+                    textBox18.Text = war3mapUnits.List[id].ScaleZ.ToString();
+                    textBox19.Text = war3mapUnits.List[id].Flags.ToString();
+                    textBox20.Text = war3mapUnits.List[id].PlayerNum.ToString();
+                    textBox21.Text = war3mapUnits.List[id].Hit.ToString();
+                    textBox22.Text = war3mapUnits.List[id].Mana.ToString();
+                    textBox29.Text = war3mapUnits.List[id].RandomFlag.ToString();
+                    textBox30.Text = war3mapUnits.List[id].UnitColor.ToString();
+                    textBox23.Text = war3mapUnits.List[id].Gold.ToString();
+                    textBox24.Text = war3mapUnits.List[id].TargetAcquisition.ToString();
+                    textBox25.Text = war3mapUnits.List[id].HeroLevel.ToString();
+                    textBox26.Text = war3mapUnits.List[id].Strength.ToString();
+                    textBox27.Text = war3mapUnits.List[id].Agility.ToString();
+                    textBox28.Text = war3mapUnits.List[id].Intelligence.ToString();
+                    textBox31.Text = war3mapUnits.List[id].Waygate.ToString();
+                    foreach (int i1 in war3mapUnits.List[id].DropList.Keys)
                     {
-                        string DropItemId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                        int DropChance = reader.ReadInt32();
+                        ListViewItem item = new ListViewItem(war3mapUnits.List[id].DropList[i1].DropItemId);
+                        item.SubItems.Add(war3mapUnits.List[id].DropList[i1].DropChance.ToString());
+                        listView12.Items.Add(item);
                     }
-                    int Gold = reader.ReadInt32();
-                    float TargetAcquisition = reader.ReadSingle();
-                    int HeroLevel = reader.ReadInt32();
-                    int Strength = reader.ReadInt32();
-                    int Agility = reader.ReadInt32();
-                    int Intelligence = reader.ReadInt32();
-                    int InvCount = reader.ReadInt32();
-                    for (int i3 = 0; i3 < DropTableCount; i3++)
+                    foreach (int i2 in war3mapUnits.List[id].InvList.Keys)
                     {
-                        int InvSlot = reader.ReadInt32();
-                        string InvItemId = Encoding.ASCII.GetString(reader.ReadBytes(4));
+                        ListViewItem item = new ListViewItem(war3mapUnits.List[id].InvList[i2].InvSlot.ToString());
+                        item.SubItems.Add(war3mapUnits.List[id].InvList[i2].InvItemId.ToString());
+                        listView13.Items.Add(item);
                     }
-                    int ModAbilityCount = reader.ReadInt32();
-                    for (int i4 = 0; i4 < ModAbilityCount; i4++)
+                    foreach (int i3 in war3mapUnits.List[id].AbilityList.Keys)
                     {
-                        string AbilityId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                        int Autocast = reader.ReadInt32();
-                        int Abilitylevel = reader.ReadInt32();
+                        ListViewItem item = new ListViewItem(war3mapUnits.List[id].AbilityList[i3].AbilityId);
+                        item.SubItems.Add(war3mapUnits.List[id].AbilityList[i3].Abilitylevel.ToString());
+                        listView14.Items.Add(item);
                     }
-                    int RandomFlag = reader.ReadInt32();
-                    reader.ReadBytes(4);//
-                    int UnitColor = reader.ReadInt32();
-                    int Waygate = reader.ReadInt32();
-                    int UnitId = reader.ReadInt32();
-                    MessageBox.Show(Gold.ToString());
-                    listView11.Items.Add(item);
                 }
             }
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (this.listView11.Items.Count != 0)
+            {
+                if (this.listView11.SelectedItems.Count != 0)
+                {
+                    int id = Int32.Parse(listView11.Items[this.listView11.SelectedItems[0].Index].SubItems[0].Text);
+                    war3mapUnits.List.Remove(id);
+                }
+            }
+            listView11.Items.Clear();
+            listView12.Items.Clear();
+            listView13.Items.Clear();
+            listView14.Items.Clear();
+            foreach (int i1 in war3mapUnits.List.Keys)
+            {
+                ListViewItem item = new ListViewItem(i1.ToString());
+                item.SubItems.Add(war3mapUnits.List[i1].OriginalId);
+                listView11.Items.Add(item);
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            war3mapUnits.Write(Config.folderPath + "\\war3mapUnits.doo");
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            war3mapUnits.Add();
+            listView11.Items.Clear();
+            foreach (int i1 in war3mapUnits.List.Keys)
+            {
+                ListViewItem item = new ListViewItem(i1.ToString());
+                item.SubItems.Add(war3mapUnits.List[i1].OriginalId);
+                listView11.Items.Add(item);
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (this.listView11.Items.Count != 0)
+            {
+                if (this.listView11.SelectedItems.Count != 0)
+                {
+                    int SelIndex = this.listView11.SelectedItems[0].Index;
+                    int id = Int32.Parse(listView11.Items[SelIndex].SubItems[0].Text);
+                    war3mapUnits.List[id].OriginalId = textBox10.Text;
+                    war3mapUnits.List[id].variation = Int32.Parse(textBox11.Text);
+                    war3mapUnits.List[id].PositionX = Single.Parse(textBox12.Text);
+                    war3mapUnits.List[id].PositionY = Single.Parse(textBox13.Text);
+                    war3mapUnits.List[id].PositionZ = Single.Parse(textBox14.Text);
+                    war3mapUnits.List[id].Rotation = Single.Parse(textBox15.Text);
+                    war3mapUnits.List[id].ScaleX = Single.Parse(textBox16.Text);
+                    war3mapUnits.List[id].ScaleY = Single.Parse(textBox17.Text);
+                    war3mapUnits.List[id].ScaleZ = Single.Parse(textBox18.Text);
+                    war3mapUnits.List[id].Flags = Byte.Parse(textBox19.Text);
+                    war3mapUnits.List[id].PlayerNum = Int32.Parse(textBox20.Text);
+                    war3mapUnits.List[id].Hit = Int32.Parse(textBox21.Text);
+                    war3mapUnits.List[id].Mana = Int32.Parse(textBox22.Text);
+                    war3mapUnits.List[id].RandomFlag = Int32.Parse(textBox29.Text);
+                    war3mapUnits.List[id].UnitColor = Int32.Parse(textBox30.Text);
+                    war3mapUnits.List[id].Gold = Int32.Parse(textBox23.Text);
+                    war3mapUnits.List[id].TargetAcquisition = Int32.Parse(textBox24.Text);
+                    war3mapUnits.List[id].HeroLevel = Int32.Parse(textBox25.Text);
+                    war3mapUnits.List[id].Strength = Int32.Parse(textBox26.Text);
+                    war3mapUnits.List[id].Agility = Int32.Parse(textBox27.Text);
+                    war3mapUnits.List[id].Intelligence = Int32.Parse(textBox28.Text);
+                    war3mapUnits.List[id].Waygate = Int32.Parse(textBox31.Text);
+                    listView11.Items.Clear();
+                    foreach (int i1 in war3mapUnits.List.Keys)
+                    {
+                        ListViewItem item = new ListViewItem(i1.ToString());
+                        item.SubItems.Add(war3mapUnits.List[i1].OriginalId);
+                        listView11.Items.Add(item);
+                    }
+                    listView11.Items[SelIndex].Selected = true;
+                    listView11.Items[SelIndex].Focused = true;
+                    listView11.Items[SelIndex].EnsureVisible();
+                }
+            }
+        }
+
     }
 }
