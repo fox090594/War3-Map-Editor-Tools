@@ -575,14 +575,19 @@ namespace War3_Map_Editor_Tools
                         {
                             int id = Int32.Parse(listView15.Items[this.listView15.SelectedItems[0].Index].SubItems[0].Text);
                             int id2 = Int32.Parse(listView17.Items[this.listView17.SelectedItems[0].Index].SubItems[0].Text);
-                            textBox43.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModId;
-                            textBox42.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModType.ToString();
-                            textBox41.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModValue;
-                            textBox40.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ObjectId;
+                            textBox43.Text = war3mapObjects.FilesList[file].CustomTable[id].ModsList[id2].ModId;
+                            textBox42.Text = war3mapObjects.FilesList[file].CustomTable[id].ModsList[id2].ModType.ToString();
+                            textBox41.Text = war3mapObjects.FilesList[file].CustomTable[id].ModsList[id2].ModValue;
+                            textBox40.Text = war3mapObjects.FilesList[file].CustomTable[id].ModsList[id2].ObjectId;
                         }
                     }
                 }
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/fox090594/War3-Map-Editor-Tools");
         }
     }
 }
