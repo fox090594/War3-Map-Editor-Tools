@@ -116,9 +116,6 @@
             this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button8 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.button10 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -127,6 +124,21 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.listView14 = new System.Windows.Forms.ListView();
+            this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader42 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label41 = new System.Windows.Forms.Label();
+            this.listView13 = new System.Windows.Forms.ListView();
+            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label40 = new System.Windows.Forms.Label();
+            this.listView12 = new System.Windows.Forms.ListView();
+            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label39 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -181,22 +193,46 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button11 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label39 = new System.Windows.Forms.Label();
-            this.listView12 = new System.Windows.Forms.ListView();
-            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView13 = new System.Windows.Forms.ListView();
-            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label40 = new System.Windows.Forms.Label();
-            this.listView14 = new System.Windows.Forms.ListView();
-            this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader42 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label41 = new System.Windows.Forms.Label();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.listView15 = new System.Windows.Forms.ListView();
+            this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader45 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView16 = new System.Windows.Forms.ListView();
+            this.columnHeader46 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader47 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader48 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.textBox38 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
+            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.listView17 = new System.Windows.Forms.ListView();
+            this.columnHeader49 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader51 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.textBox43 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -213,6 +249,9 @@
             this.tabPage12.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.tabPage14.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.tabPage15.SuspendLayout();
+            this.tabPage16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -222,7 +261,7 @@
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.tabPage13);
             this.tabControl1.Controls.Add(this.tabPage14);
-            this.tabControl1.Location = new System.Drawing.Point(13, 12);
+            this.tabControl1.Location = new System.Drawing.Point(13, 39);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1392, 812);
@@ -234,9 +273,6 @@
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.tabControl2);
             this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -247,7 +283,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1118, 37);
+            this.button6.Location = new System.Drawing.Point(976, 8);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(136, 23);
             this.button6.TabIndex = 6;
@@ -276,7 +312,7 @@
             this.tabControl2.Controls.Add(this.tabPage9);
             this.tabControl2.Controls.Add(this.tabPage10);
             this.tabControl2.Controls.Add(this.tabPage11);
-            this.tabControl2.Location = new System.Drawing.Point(6, 45);
+            this.tabControl2.Location = new System.Drawing.Point(6, 34);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1363, 732);
@@ -797,7 +833,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 9);
+            this.textBox1.Location = new System.Drawing.Point(131, 11);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(886, 22);
             this.textBox1.TabIndex = 2;
@@ -805,7 +841,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 12);
+            this.label1.Location = new System.Drawing.Point(19, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 16);
             this.label1.TabIndex = 1;
@@ -813,7 +849,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1010, 8);
+            this.button1.Location = new System.Drawing.Point(1023, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -945,12 +981,9 @@
             // 
             // tabPage12
             // 
-            this.tabPage12.Controls.Add(this.label42);
-            this.tabPage12.Controls.Add(this.listView10);
+            this.tabPage12.Controls.Add(this.comboBox1);
+            this.tabPage12.Controls.Add(this.tabControl3);
             this.tabPage12.Controls.Add(this.button8);
-            this.tabPage12.Controls.Add(this.textBox7);
-            this.tabPage12.Controls.Add(this.label14);
-            this.tabPage12.Controls.Add(this.button7);
             this.tabPage12.Location = new System.Drawing.Point(4, 25);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
@@ -968,12 +1001,13 @@
             this.listView10.FullRowSelect = true;
             this.listView10.GridLines = true;
             this.listView10.HideSelection = false;
-            this.listView10.Location = new System.Drawing.Point(16, 45);
+            this.listView10.Location = new System.Drawing.Point(6, 6);
             this.listView10.Name = "listView10";
             this.listView10.Size = new System.Drawing.Size(482, 691);
             this.listView10.TabIndex = 7;
             this.listView10.UseCompatibleStateImageBehavior = false;
             this.listView10.View = System.Windows.Forms.View.Details;
+            this.listView10.SelectedIndexChanged += new System.EventHandler(this.listView10_SelectedIndexChanged);
             // 
             // columnHeader28
             // 
@@ -981,49 +1015,23 @@
             // 
             // columnHeader29
             // 
-            this.columnHeader29.Text = "Index";
+            this.columnHeader29.Text = "OriginalID";
             this.columnHeader29.Width = 117;
             // 
             // columnHeader30
             // 
-            this.columnHeader30.Text = "Name";
+            this.columnHeader30.Text = "CustomID";
             this.columnHeader30.Width = 266;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(1098, 16);
+            this.button8.Location = new System.Drawing.Point(1299, 6);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 6;
             this.button8.Text = "Load";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(125, 17);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(886, 22);
-            this.textBox7.TabIndex = 5;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 20);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 16);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Map folder path:";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(1017, 16);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Browser";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // tabPage13
             // 
@@ -1158,6 +1166,123 @@
             this.tabPage14.TabIndex = 4;
             this.tabPage14.Text = "war3mapUnits.doo";
             this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // listView14
+            // 
+            this.listView14.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader40,
+            this.columnHeader41,
+            this.columnHeader42});
+            this.listView14.FullRowSelect = true;
+            this.listView14.GridLines = true;
+            this.listView14.HideSelection = false;
+            this.listView14.Location = new System.Drawing.Point(494, 595);
+            this.listView14.Name = "listView14";
+            this.listView14.Size = new System.Drawing.Size(314, 124);
+            this.listView14.TabIndex = 62;
+            this.listView14.UseCompatibleStateImageBehavior = false;
+            this.listView14.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader40
+            // 
+            this.columnHeader40.Text = "#";
+            // 
+            // columnHeader41
+            // 
+            this.columnHeader41.Text = "AbilityId";
+            this.columnHeader41.Width = 117;
+            // 
+            // columnHeader42
+            // 
+            this.columnHeader42.Text = "level";
+            this.columnHeader42.Width = 109;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(494, 576);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(46, 16);
+            this.label41.TabIndex = 61;
+            this.label41.Text = "Ability:";
+            // 
+            // listView13
+            // 
+            this.listView13.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader37,
+            this.columnHeader38,
+            this.columnHeader39});
+            this.listView13.FullRowSelect = true;
+            this.listView13.GridLines = true;
+            this.listView13.HideSelection = false;
+            this.listView13.Location = new System.Drawing.Point(491, 439);
+            this.listView13.Name = "listView13";
+            this.listView13.Size = new System.Drawing.Size(314, 124);
+            this.listView13.TabIndex = 60;
+            this.listView13.UseCompatibleStateImageBehavior = false;
+            this.listView13.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader37
+            // 
+            this.columnHeader37.Text = "#";
+            // 
+            // columnHeader38
+            // 
+            this.columnHeader38.Text = "Slot";
+            this.columnHeader38.Width = 117;
+            // 
+            // columnHeader39
+            // 
+            this.columnHeader39.Text = "ItemID";
+            this.columnHeader39.Width = 109;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(491, 420);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(52, 16);
+            this.label40.TabIndex = 59;
+            this.label40.Text = "InvItem:";
+            // 
+            // listView12
+            // 
+            this.listView12.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader34,
+            this.columnHeader35,
+            this.columnHeader36});
+            this.listView12.FullRowSelect = true;
+            this.listView12.GridLines = true;
+            this.listView12.HideSelection = false;
+            this.listView12.Location = new System.Drawing.Point(494, 285);
+            this.listView12.Name = "listView12";
+            this.listView12.Size = new System.Drawing.Size(314, 124);
+            this.listView12.TabIndex = 58;
+            this.listView12.UseCompatibleStateImageBehavior = false;
+            this.listView12.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader34
+            // 
+            this.columnHeader34.Text = "#";
+            // 
+            // columnHeader35
+            // 
+            this.columnHeader35.Text = "ItemId";
+            this.columnHeader35.Width = 117;
+            // 
+            // columnHeader36
+            // 
+            this.columnHeader36.Text = "Chance";
+            this.columnHeader36.Width = 109;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(494, 266);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(76, 16);
+            this.label39.TabIndex = 57;
+            this.label39.Text = "DropTable:";
             // 
             // button15
             // 
@@ -1596,138 +1721,374 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label39
+            // tabControl3
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(494, 266);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(76, 16);
-            this.label39.TabIndex = 57;
-            this.label39.Text = "DropTable:";
+            this.tabControl3.Controls.Add(this.tabPage15);
+            this.tabControl3.Controls.Add(this.tabPage16);
+            this.tabControl3.Location = new System.Drawing.Point(6, 35);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(1372, 735);
+            this.tabControl3.TabIndex = 9;
             // 
-            // listView12
+            // tabPage15
             // 
-            this.listView12.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader34,
-            this.columnHeader35,
-            this.columnHeader36});
-            this.listView12.FullRowSelect = true;
-            this.listView12.GridLines = true;
-            this.listView12.HideSelection = false;
-            this.listView12.Location = new System.Drawing.Point(494, 285);
-            this.listView12.Name = "listView12";
-            this.listView12.Size = new System.Drawing.Size(314, 124);
-            this.listView12.TabIndex = 58;
-            this.listView12.UseCompatibleStateImageBehavior = false;
-            this.listView12.View = System.Windows.Forms.View.Details;
+            this.tabPage15.Controls.Add(this.textBox37);
+            this.tabPage15.Controls.Add(this.label49);
+            this.tabPage15.Controls.Add(this.textBox36);
+            this.tabPage15.Controls.Add(this.label48);
+            this.tabPage15.Controls.Add(this.textBox35);
+            this.tabPage15.Controls.Add(this.label47);
+            this.tabPage15.Controls.Add(this.textBox34);
+            this.tabPage15.Controls.Add(this.label46);
+            this.tabPage15.Controls.Add(this.textBox33);
+            this.tabPage15.Controls.Add(this.label45);
+            this.tabPage15.Controls.Add(this.textBox32);
+            this.tabPage15.Controls.Add(this.label44);
+            this.tabPage15.Controls.Add(this.listView16);
+            this.tabPage15.Controls.Add(this.listView10);
+            this.tabPage15.Location = new System.Drawing.Point(4, 25);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(1364, 706);
+            this.tabPage15.TabIndex = 0;
+            this.tabPage15.Text = "OriginalTable";
+            this.tabPage15.UseVisualStyleBackColor = true;
             // 
-            // columnHeader34
+            // tabPage16
             // 
-            this.columnHeader34.Text = "#";
+            this.tabPage16.Controls.Add(this.textBox40);
+            this.tabPage16.Controls.Add(this.label50);
+            this.tabPage16.Controls.Add(this.textBox41);
+            this.tabPage16.Controls.Add(this.label51);
+            this.tabPage16.Controls.Add(this.textBox42);
+            this.tabPage16.Controls.Add(this.label52);
+            this.tabPage16.Controls.Add(this.textBox43);
+            this.tabPage16.Controls.Add(this.label53);
+            this.tabPage16.Controls.Add(this.listView17);
+            this.tabPage16.Controls.Add(this.textBox38);
+            this.tabPage16.Controls.Add(this.label42);
+            this.tabPage16.Controls.Add(this.textBox39);
+            this.tabPage16.Controls.Add(this.label43);
+            this.tabPage16.Controls.Add(this.listView15);
+            this.tabPage16.Location = new System.Drawing.Point(4, 25);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage16.Size = new System.Drawing.Size(1364, 706);
+            this.tabPage16.TabIndex = 1;
+            this.tabPage16.Text = "CustomTable";
+            this.tabPage16.UseVisualStyleBackColor = true;
             // 
-            // columnHeader35
+            // listView15
             // 
-            this.columnHeader35.Text = "ItemId";
-            this.columnHeader35.Width = 117;
+            this.listView15.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader43,
+            this.columnHeader44,
+            this.columnHeader45});
+            this.listView15.FullRowSelect = true;
+            this.listView15.GridLines = true;
+            this.listView15.HideSelection = false;
+            this.listView15.Location = new System.Drawing.Point(6, 9);
+            this.listView15.Name = "listView15";
+            this.listView15.Size = new System.Drawing.Size(482, 691);
+            this.listView15.TabIndex = 8;
+            this.listView15.UseCompatibleStateImageBehavior = false;
+            this.listView15.View = System.Windows.Forms.View.Details;
+            this.listView15.SelectedIndexChanged += new System.EventHandler(this.listView15_SelectedIndexChanged);
             // 
-            // columnHeader36
+            // columnHeader43
             // 
-            this.columnHeader36.Text = "Chance";
-            this.columnHeader36.Width = 109;
+            this.columnHeader43.Text = "#";
             // 
-            // listView13
+            // columnHeader44
             // 
-            this.listView13.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader37,
-            this.columnHeader38,
-            this.columnHeader39});
-            this.listView13.FullRowSelect = true;
-            this.listView13.GridLines = true;
-            this.listView13.HideSelection = false;
-            this.listView13.Location = new System.Drawing.Point(491, 439);
-            this.listView13.Name = "listView13";
-            this.listView13.Size = new System.Drawing.Size(314, 124);
-            this.listView13.TabIndex = 60;
-            this.listView13.UseCompatibleStateImageBehavior = false;
-            this.listView13.View = System.Windows.Forms.View.Details;
+            this.columnHeader44.Text = "OriginalID";
+            this.columnHeader44.Width = 117;
             // 
-            // columnHeader37
+            // columnHeader45
             // 
-            this.columnHeader37.Text = "#";
+            this.columnHeader45.Text = "CustomID";
+            this.columnHeader45.Width = 266;
             // 
-            // columnHeader38
+            // listView16
             // 
-            this.columnHeader38.Text = "Slot";
-            this.columnHeader38.Width = 117;
+            this.listView16.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader46,
+            this.columnHeader47,
+            this.columnHeader48});
+            this.listView16.FullRowSelect = true;
+            this.listView16.GridLines = true;
+            this.listView16.HideSelection = false;
+            this.listView16.Location = new System.Drawing.Point(494, 58);
+            this.listView16.Name = "listView16";
+            this.listView16.Size = new System.Drawing.Size(850, 342);
+            this.listView16.TabIndex = 9;
+            this.listView16.UseCompatibleStateImageBehavior = false;
+            this.listView16.View = System.Windows.Forms.View.Details;
+            this.listView16.SelectedIndexChanged += new System.EventHandler(this.listView16_SelectedIndexChanged);
             // 
-            // columnHeader39
+            // columnHeader46
             // 
-            this.columnHeader39.Text = "ItemID";
-            this.columnHeader39.Width = 109;
+            this.columnHeader46.Text = "#";
             // 
-            // label40
+            // columnHeader47
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(491, 420);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(52, 16);
-            this.label40.TabIndex = 59;
-            this.label40.Text = "InvItem:";
+            this.columnHeader47.Text = "Mod Id";
+            this.columnHeader47.Width = 117;
             // 
-            // listView14
+            // columnHeader48
             // 
-            this.listView14.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader40,
-            this.columnHeader41,
-            this.columnHeader42});
-            this.listView14.FullRowSelect = true;
-            this.listView14.GridLines = true;
-            this.listView14.HideSelection = false;
-            this.listView14.Location = new System.Drawing.Point(494, 595);
-            this.listView14.Name = "listView14";
-            this.listView14.Size = new System.Drawing.Size(314, 124);
-            this.listView14.TabIndex = 62;
-            this.listView14.UseCompatibleStateImageBehavior = false;
-            this.listView14.View = System.Windows.Forms.View.Details;
+            this.columnHeader48.Text = "Value";
+            this.columnHeader48.Width = 266;
             // 
-            // columnHeader40
+            // textBox32
             // 
-            this.columnHeader40.Text = "#";
+            this.textBox32.Location = new System.Drawing.Point(601, 6);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(168, 22);
+            this.textBox32.TabIndex = 12;
             // 
-            // columnHeader41
+            // label44
             // 
-            this.columnHeader41.Text = "AbilityId";
-            this.columnHeader41.Width = 117;
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(528, 9);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(67, 16);
+            this.label44.TabIndex = 11;
+            this.label44.Text = "OriginalId:";
             // 
-            // columnHeader42
+            // textBox33
             // 
-            this.columnHeader42.Text = "level";
-            this.columnHeader42.Width = 109;
+            this.textBox33.Location = new System.Drawing.Point(871, 6);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(168, 22);
+            this.textBox33.TabIndex = 14;
             // 
-            // label41
+            // label45
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(494, 576);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(46, 16);
-            this.label41.TabIndex = 61;
-            this.label41.Text = "Ability:";
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(798, 9);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(66, 16);
+            this.label45.TabIndex = 13;
+            this.label45.Text = "CustomId:";
+            // 
+            // textBox34
+            // 
+            this.textBox34.Location = new System.Drawing.Point(591, 424);
+            this.textBox34.Name = "textBox34";
+            this.textBox34.Size = new System.Drawing.Size(168, 22);
+            this.textBox34.TabIndex = 16;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(518, 427);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(48, 16);
+            this.label46.TabIndex = 15;
+            this.label46.Text = "ModId:";
+            // 
+            // textBox35
+            // 
+            this.textBox35.Location = new System.Drawing.Point(591, 452);
+            this.textBox35.Name = "textBox35";
+            this.textBox35.Size = new System.Drawing.Size(168, 22);
+            this.textBox35.TabIndex = 18;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(518, 455);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(69, 16);
+            this.label47.TabIndex = 17;
+            this.label47.Text = "ModType:";
+            // 
+            // textBox36
+            // 
+            this.textBox36.Location = new System.Drawing.Point(591, 480);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(736, 22);
+            this.textBox36.TabIndex = 20;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(518, 483);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(72, 16);
+            this.label48.TabIndex = 19;
+            this.label48.Text = "ModValue:";
+            // 
+            // textBox37
+            // 
+            this.textBox37.Location = new System.Drawing.Point(591, 508);
+            this.textBox37.Name = "textBox37";
+            this.textBox37.Size = new System.Drawing.Size(168, 22);
+            this.textBox37.TabIndex = 22;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(518, 511);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(60, 16);
+            this.label49.TabIndex = 21;
+            this.label49.Text = "ObjectId:";
+            // 
+            // textBox38
+            // 
+            this.textBox38.Location = new System.Drawing.Point(875, 9);
+            this.textBox38.Name = "textBox38";
+            this.textBox38.Size = new System.Drawing.Size(168, 22);
+            this.textBox38.TabIndex = 18;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(519, 57);
+            this.label42.Location = new System.Drawing.Point(802, 12);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(51, 16);
-            this.label42.TabIndex = 8;
-            this.label42.Text = "Counts:";
+            this.label42.Size = new System.Drawing.Size(66, 16);
+            this.label42.TabIndex = 17;
+            this.label42.Text = "CustomId:";
+            // 
+            // textBox39
+            // 
+            this.textBox39.Location = new System.Drawing.Point(605, 9);
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new System.Drawing.Size(168, 22);
+            this.textBox39.TabIndex = 16;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(532, 12);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(67, 16);
+            this.label43.TabIndex = 15;
+            this.label43.Text = "OriginalId:";
+            // 
+            // listView17
+            // 
+            this.listView17.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader49,
+            this.columnHeader50,
+            this.columnHeader51});
+            this.listView17.FullRowSelect = true;
+            this.listView17.GridLines = true;
+            this.listView17.HideSelection = false;
+            this.listView17.Location = new System.Drawing.Point(494, 64);
+            this.listView17.Name = "listView17";
+            this.listView17.Size = new System.Drawing.Size(850, 342);
+            this.listView17.TabIndex = 19;
+            this.listView17.UseCompatibleStateImageBehavior = false;
+            this.listView17.View = System.Windows.Forms.View.Details;
+            this.listView17.SelectedIndexChanged += new System.EventHandler(this.listView17_SelectedIndexChanged);
+            // 
+            // columnHeader49
+            // 
+            this.columnHeader49.Text = "#";
+            // 
+            // columnHeader50
+            // 
+            this.columnHeader50.Text = "Mod Id";
+            this.columnHeader50.Width = 117;
+            // 
+            // columnHeader51
+            // 
+            this.columnHeader51.Text = "Value";
+            this.columnHeader51.Width = 266;
+            // 
+            // textBox40
+            // 
+            this.textBox40.Location = new System.Drawing.Point(605, 511);
+            this.textBox40.Name = "textBox40";
+            this.textBox40.Size = new System.Drawing.Size(168, 22);
+            this.textBox40.TabIndex = 30;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(532, 514);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(60, 16);
+            this.label50.TabIndex = 29;
+            this.label50.Text = "ObjectId:";
+            // 
+            // textBox41
+            // 
+            this.textBox41.Location = new System.Drawing.Point(605, 483);
+            this.textBox41.Name = "textBox41";
+            this.textBox41.Size = new System.Drawing.Size(736, 22);
+            this.textBox41.TabIndex = 28;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(532, 486);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(72, 16);
+            this.label51.TabIndex = 27;
+            this.label51.Text = "ModValue:";
+            // 
+            // textBox42
+            // 
+            this.textBox42.Location = new System.Drawing.Point(605, 455);
+            this.textBox42.Name = "textBox42";
+            this.textBox42.Size = new System.Drawing.Size(168, 22);
+            this.textBox42.TabIndex = 26;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(532, 458);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(69, 16);
+            this.label52.TabIndex = 25;
+            this.label52.Text = "ModType:";
+            // 
+            // textBox43
+            // 
+            this.textBox43.Location = new System.Drawing.Point(605, 427);
+            this.textBox43.Name = "textBox43";
+            this.textBox43.Size = new System.Drawing.Size(168, 22);
+            this.textBox43.TabIndex = 24;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(532, 430);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(48, 16);
+            this.label53.TabIndex = 23;
+            this.label53.Text = "ModId:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "war3map.w3u",
+            "war3map.w3t",
+            "war3map.w3a",
+            "war3map.w3b",
+            "war3map.w3d",
+            "war3map.w3q",
+            "war3map.w3h"});
+            this.comboBox1.Location = new System.Drawing.Point(1142, 6);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 24);
+            this.comboBox1.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1417, 827);
+            this.ClientSize = new System.Drawing.Size(1417, 863);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1736,7 +2097,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -1751,12 +2111,17 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage12.ResumeLayout(false);
-            this.tabPage12.PerformLayout();
             this.tabPage13.ResumeLayout(false);
             this.tabPage13.PerformLayout();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage15.ResumeLayout(false);
+            this.tabPage15.PerformLayout();
+            this.tabPage16.ResumeLayout(false);
+            this.tabPage16.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1845,9 +2210,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader27;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabPage tabPage12;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.TextBox textBox8;
@@ -1929,7 +2291,46 @@
         private System.Windows.Forms.ColumnHeader columnHeader38;
         private System.Windows.Forms.ColumnHeader columnHeader39;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage15;
+        private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.ListView listView15;
+        private System.Windows.Forms.ColumnHeader columnHeader43;
+        private System.Windows.Forms.ColumnHeader columnHeader44;
+        private System.Windows.Forms.ColumnHeader columnHeader45;
+        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.ListView listView16;
+        private System.Windows.Forms.ColumnHeader columnHeader46;
+        private System.Windows.Forms.ColumnHeader columnHeader47;
+        private System.Windows.Forms.ColumnHeader columnHeader48;
+        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox textBox35;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox textBox38;
         private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.ListView listView17;
+        private System.Windows.Forms.ColumnHeader columnHeader49;
+        private System.Windows.Forms.ColumnHeader columnHeader50;
+        private System.Windows.Forms.ColumnHeader columnHeader51;
+        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox textBox42;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox textBox43;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

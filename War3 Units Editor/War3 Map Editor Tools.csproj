@@ -73,6 +73,7 @@
     <Compile Include="UnitsEditor\UnitUI.cs" />
     <Compile Include="UnitsEditor\UnitWeapons.cs" />
     <Compile Include="UnitsEditor\UpgradeData.cs" />
+    <Compile Include="war3mapObjects.cs" />
     <Compile Include="war3mapUnits.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

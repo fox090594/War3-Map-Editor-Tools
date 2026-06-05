@@ -14,6 +14,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using War3_Map_Editor_Tools.UnitsEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using static War3_Map_Editor_Tools.war3mapUnits;
 
@@ -45,7 +46,6 @@ namespace War3_Map_Editor_Tools
                 {
                     Config.folderPath = dialog.SelectedPath;
                     textBox1.Text = Config.folderPath;
-                    textBox7.Text = Config.folderPath;
                     Config.Write();
                 }
             }
@@ -253,59 +253,15 @@ namespace War3_Map_Editor_Tools
 
         private void button7_Click(object sender, EventArgs e)
         {
-            SelectFolder();
 
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            using (BinaryReader reader = new BinaryReader(File.Open(Config.folderPath + "\\war3map.w3u", FileMode.Open)))
-            {
-                int version = reader.ReadInt32();
-                int countTable = reader.ReadInt32();
-                for (int i1 = 0; i1 < countTable; i1++)
-                {
-                    string OriginalId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                    ListViewItem item = new ListViewItem(OriginalId.ToString());
-                    string CustomId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                    int ModCount = reader.ReadInt32();
-                    item.SubItems.Add(CustomId.ToString());
-                    for (int i2 = 0; i2 < ModCount; i2++)
-                    {
-                        string ModId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                        
-                        int ModType = reader.ReadInt32();//0=int, 1=real, 2=unreal, 3=string
-                        //MessageBox.Show(ModId + " Type:" + ModType);
-                        //int Level = reader.ReadInt32();
-                        //int Column = reader.ReadInt32();
-                        string ModValue = ReadModificationValue(reader, ModType);
-                        string ObjectId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                    }
-                    listView10.Items.Add(item);
-                }
-                int countTable2 = reader.ReadInt32();
-                for (int i3 = 0; i3 < countTable2; i3++)
-                {
-                    string OriginalId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                    ListViewItem item = new ListViewItem(OriginalId.ToString());
-                    string CustomId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                    int ModCount = reader.ReadInt32();
-                    item.SubItems.Add(CustomId.ToString());
-                    for (int i4 = 0; i4 < ModCount; i4++)
-                    {
-                        string ModId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-
-                        int ModType = reader.ReadInt32();//0=int, 1=real, 2=unreal, 3=string
-                        //MessageBox.Show(ModId + " Type:" + ModType);
-                        //int Level = reader.ReadInt32();
-                        //int Column = reader.ReadInt32();
-                        string ModValue = ReadModificationValue(reader, ModType);
-                        string ObjectId = Encoding.ASCII.GetString(reader.ReadBytes(4));
-                    }
-                    listView10.Items.Add(item);
-                }
-                label42.Text = "Counts: " + "Standart: " + countTable + " Modded: " + countTable2;
-            }
+            string file = comboBox1.Text.Replace(" ","");
+            war3mapObjects.Load(file);
+            ShowObjectCustomTable(file);
+            ShowObjectOriginalTable(file);
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -317,46 +273,7 @@ namespace War3_Map_Editor_Tools
             textBox8.Text = HexToAscii(hexValue);//Reverse(HexToAscii(hexValue));
         }
 
-        public static string ReadModificationValue(BinaryReader reader, int type)
-        {
-            string result = "";//0=int, 1=real, 2=unreal, 3=string
-            switch (type)
-            {
-                case 0:
-                    result = reader.ReadInt32().ToString();
-                    break;
-                case 1:
-                    result = reader.ReadSingle().ToString();
-                    break;
-                case 2:
-                    result = reader.ReadInt32().ToString();
-                    break;
-                case 3:
-                    Dictionary<int, byte> Bytes = new Dictionary<int, byte>();
-                    while (true)
-                    {
-                        byte v = reader.ReadByte();
-                        if (v == 0x00)
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            Bytes.Add(Bytes.Count, v);
-                        }
-                    }
-                    byte[] bytes = new byte[Bytes.Count];
-                    for (int i = 0; i < Bytes.Count; i++)
-                    {
-                        bytes[i] = Bytes[i];
-                    }
-                    result = Encoding.UTF8.GetString(bytes);
-                    //result = reader.ReadString();//00 - end of strings
-                    //MessageBox.Show(result);
-                    break;
-            }
-            return result;
-        }
+
         public static string GetIDfromwar3map(int input)
         {
             string hexValue = input.ToString("X");
@@ -387,8 +304,8 @@ namespace War3_Map_Editor_Tools
         private void Form1_Load(object sender, EventArgs e)
         {
             Config.Load();
+            comboBox1.SelectedIndex = 0;
             textBox1.Text = Config.folderPath;
-            textBox7.Text = Config.folderPath;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -552,5 +469,120 @@ namespace War3_Map_Editor_Tools
             }
         }
 
+        private void ShowObjectOriginalTable(string file)
+        {
+            listView10.Items.Clear();
+            listView16.Items.Clear();
+            foreach (int i1 in war3mapObjects.FilesList[file].OriginalTable.Keys)
+            {
+                ListViewItem item = new ListViewItem(i1.ToString());
+                item.SubItems.Add(war3mapObjects.FilesList[file].OriginalTable[i1].OriginalId);
+                item.SubItems.Add(war3mapObjects.FilesList[file].OriginalTable[i1].CustomId);
+                listView10.Items.Add(item);
+            }
+        }
+
+        private void ShowObjectCustomTable(string file)
+        {
+            listView15.Items.Clear();
+            listView17.Items.Clear();
+            foreach (int i1 in war3mapObjects.FilesList[file].CustomTable.Keys)
+            {
+                ListViewItem item = new ListViewItem(i1.ToString());
+                item.SubItems.Add(war3mapObjects.FilesList[file].CustomTable[i1].OriginalId);
+                item.SubItems.Add(war3mapObjects.FilesList[file].CustomTable[i1].CustomId);
+                listView15.Items.Add(item);
+            }
+        }
+
+        private void listView10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string file = comboBox1.Text.Replace(" ", "");
+            listView16.Items.Clear();
+            if (this.listView10.Items.Count != 0)
+            {
+                if (this.listView10.SelectedItems.Count != 0)
+                {
+                    int id = Int32.Parse(listView10.Items[this.listView10.SelectedItems[0].Index].SubItems[0].Text);
+                    textBox32.Text = war3mapObjects.FilesList[file].OriginalTable[id].OriginalId;
+                    textBox33.Text = war3mapObjects.FilesList[file].OriginalTable[id].CustomId;
+                    foreach (int i1 in war3mapObjects.FilesList[file].OriginalTable[id].ModsList.Keys)
+                    {
+                        ListViewItem item = new ListViewItem(i1.ToString());
+                        item.SubItems.Add(war3mapObjects.FilesList[file].OriginalTable[id].ModsList[i1].ModId);
+                        item.SubItems.Add(war3mapObjects.FilesList[file].OriginalTable[id].ModsList[i1].ModValue);
+                        listView16.Items.Add(item);
+                    }
+                }
+            }
+        }
+
+        private void listView15_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string file = comboBox1.Text.Replace(" ", "");
+            listView17.Items.Clear();
+            if (this.listView15.Items.Count != 0)
+            {
+                if (this.listView15.SelectedItems.Count != 0)
+                {
+                    int id = Int32.Parse(listView15.Items[this.listView15.SelectedItems[0].Index].SubItems[0].Text);
+                    textBox39.Text = war3mapObjects.FilesList[file].CustomTable[id].OriginalId;
+                    textBox38.Text = war3mapObjects.FilesList[file].CustomTable[id].CustomId;
+                    foreach (int i1 in war3mapObjects.FilesList[file].CustomTable[id].ModsList.Keys)
+                    {
+                        ListViewItem item = new ListViewItem(i1.ToString());
+                        item.SubItems.Add(war3mapObjects.FilesList[file].CustomTable[id].ModsList[i1].ModId);
+                        item.SubItems.Add(war3mapObjects.FilesList[file].CustomTable[id].ModsList[i1].ModValue);
+                        listView17.Items.Add(item);
+                    }
+                }
+            }
+        }
+
+        private void listView16_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string file = comboBox1.Text.Replace(" ", "");
+            if (this.listView10.Items.Count != 0)
+            {
+                if (this.listView10.SelectedItems.Count != 0)
+                {
+                    if (this.listView16.Items.Count != 0)
+                    {
+                        if (this.listView16.SelectedItems.Count != 0)
+                        {
+                            int id = Int32.Parse(listView10.Items[this.listView10.SelectedItems[0].Index].SubItems[0].Text);
+                            int id2 = Int32.Parse(listView16.Items[this.listView16.SelectedItems[0].Index].SubItems[0].Text);
+                            textBox34.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModId;
+                            textBox35.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModType.ToString();
+                            textBox36.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModValue;
+                            textBox37.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ObjectId;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void listView17_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string file = comboBox1.Text.Replace(" ", "");
+            if (this.listView15.Items.Count != 0)
+            {
+                if (this.listView15.SelectedItems.Count != 0)
+                {
+                    if (this.listView17.Items.Count != 0)
+                    {
+                        if (this.listView17.SelectedItems.Count != 0)
+                        {
+                            int id = Int32.Parse(listView15.Items[this.listView15.SelectedItems[0].Index].SubItems[0].Text);
+                            int id2 = Int32.Parse(listView17.Items[this.listView17.SelectedItems[0].Index].SubItems[0].Text);
+                            textBox43.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModId;
+                            textBox42.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModType.ToString();
+                            textBox41.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ModValue;
+                            textBox40.Text = war3mapObjects.FilesList[file].OriginalTable[id].ModsList[id2].ObjectId;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
