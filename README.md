@@ -1,5 +1,6 @@
 # War3-Map-Editor-Tools
-[Release]([https://www.google.com](https://github.com/fox090594/War3-Map-Editor-Tools/tree/main/War3%20Units%20Editor/bin/Release )
+Link to the Release section: [Link](#tree/main/War3%20Units%20Editor/bin/Release).
+
 
 ## Functions
  * w3x Files Renamer
