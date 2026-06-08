@@ -1,4 +1,5 @@
 # War3-Map-Editor-Tools
+Release section: [Link](	/../../tree/main/War3%20Units%20Editor/bin/Release).
 
 ## Functions
  * w3x Files Renamer
