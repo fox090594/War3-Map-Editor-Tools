@@ -234,6 +234,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -956,6 +960,8 @@
             // 
             // tabPage12
             // 
+            this.tabPage12.Controls.Add(this.checkBox1);
+            this.tabPage12.Controls.Add(this.button7);
             this.tabPage12.Controls.Add(this.comboBox1);
             this.tabPage12.Controls.Add(this.tabControl3);
             this.tabPage12.Controls.Add(this.button8);
@@ -978,7 +984,7 @@
             "war3map.w3d",
             "war3map.w3q",
             "war3map.w3h"});
-            this.comboBox1.Location = new System.Drawing.Point(1142, 6);
+            this.comboBox1.Location = new System.Drawing.Point(916, 8);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 24);
             this.comboBox1.TabIndex = 10;
@@ -987,14 +993,15 @@
             // 
             this.tabControl3.Controls.Add(this.tabPage15);
             this.tabControl3.Controls.Add(this.tabPage16);
-            this.tabControl3.Location = new System.Drawing.Point(6, 35);
+            this.tabControl3.Location = new System.Drawing.Point(6, 36);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1372, 735);
+            this.tabControl3.Size = new System.Drawing.Size(1372, 734);
             this.tabControl3.TabIndex = 9;
             // 
             // tabPage15
             // 
+            this.tabPage15.Controls.Add(this.button16);
             this.tabPage15.Controls.Add(this.textBox37);
             this.tabPage15.Controls.Add(this.label49);
             this.tabPage15.Controls.Add(this.textBox36);
@@ -1012,7 +1019,7 @@
             this.tabPage15.Location = new System.Drawing.Point(4, 25);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(1364, 706);
+            this.tabPage15.Size = new System.Drawing.Size(1364, 705);
             this.tabPage15.TabIndex = 0;
             this.tabPage15.Text = "OriginalTable";
             this.tabPage15.UseVisualStyleBackColor = true;
@@ -1122,9 +1129,9 @@
             this.listView16.FullRowSelect = true;
             this.listView16.GridLines = true;
             this.listView16.HideSelection = false;
-            this.listView16.Location = new System.Drawing.Point(494, 58);
+            this.listView16.Location = new System.Drawing.Point(521, 58);
             this.listView16.Name = "listView16";
-            this.listView16.Size = new System.Drawing.Size(850, 342);
+            this.listView16.Size = new System.Drawing.Size(823, 342);
             this.listView16.TabIndex = 9;
             this.listView16.UseCompatibleStateImageBehavior = false;
             this.listView16.View = System.Windows.Forms.View.Details;
@@ -1177,6 +1184,7 @@
             // 
             // tabPage16
             // 
+            this.tabPage16.Controls.Add(this.button17);
             this.tabPage16.Controls.Add(this.textBox40);
             this.tabPage16.Controls.Add(this.label50);
             this.tabPage16.Controls.Add(this.textBox41);
@@ -1194,7 +1202,7 @@
             this.tabPage16.Location = new System.Drawing.Point(4, 25);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(1364, 706);
+            this.tabPage16.Size = new System.Drawing.Size(1364, 705);
             this.tabPage16.TabIndex = 1;
             this.tabPage16.Text = "CustomTable";
             this.tabPage16.UseVisualStyleBackColor = true;
@@ -1272,9 +1280,9 @@
             this.listView17.FullRowSelect = true;
             this.listView17.GridLines = true;
             this.listView17.HideSelection = false;
-            this.listView17.Location = new System.Drawing.Point(494, 64);
+            this.listView17.Location = new System.Drawing.Point(535, 64);
             this.listView17.Name = "listView17";
-            this.listView17.Size = new System.Drawing.Size(850, 342);
+            this.listView17.Size = new System.Drawing.Size(809, 342);
             this.listView17.TabIndex = 19;
             this.listView17.UseCompatibleStateImageBehavior = false;
             this.listView17.View = System.Windows.Forms.View.Details;
@@ -1292,7 +1300,7 @@
             // columnHeader51
             // 
             this.columnHeader51.Text = "Value";
-            this.columnHeader51.Width = 266;
+            this.columnHeader51.Width = 596;
             // 
             // textBox38
             // 
@@ -1359,7 +1367,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(1299, 6);
+            this.button8.Location = new System.Drawing.Point(1073, 8);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 6;
@@ -1630,7 +1638,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(497, 725);
+            this.button14.Location = new System.Drawing.Point(6, 754);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(160, 23);
             this.button14.TabIndex = 55;
@@ -1650,7 +1658,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(497, 754);
+            this.button12.Location = new System.Drawing.Point(172, 754);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(160, 23);
             this.button12.TabIndex = 53;
@@ -2021,7 +2029,7 @@
             this.listView11.HideSelection = false;
             this.listView11.Location = new System.Drawing.Point(6, 35);
             this.listView11.Name = "listView11";
-            this.listView11.Size = new System.Drawing.Size(482, 742);
+            this.listView11.Size = new System.Drawing.Size(482, 713);
             this.listView11.TabIndex = 8;
             this.listView11.UseCompatibleStateImageBehavior = false;
             this.listView11.View = System.Windows.Forms.View.Details;
@@ -2092,6 +2100,46 @@
             this.linkLabel1.Text = "GitHub";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1154, 8);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Write";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(1208, 406);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(136, 23);
+            this.button16.TabIndex = 23;
+            this.button16.Text = "Remove Mod";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(1208, 412);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(136, 23);
+            this.button17.TabIndex = 31;
+            this.button17.Text = "Remove Mod";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(1235, 10);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(139, 20);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Save Empty Mods";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2124,6 +2172,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage12.ResumeLayout(false);
+            this.tabPage12.PerformLayout();
             this.tabControl3.ResumeLayout(false);
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
@@ -2345,6 +2394,10 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

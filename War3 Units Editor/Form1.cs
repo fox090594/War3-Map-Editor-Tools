@@ -589,5 +589,68 @@ namespace War3_Map_Editor_Tools
         {
             System.Diagnostics.Process.Start("https://github.com/fox090594/War3-Map-Editor-Tools");
         }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            string file = comboBox1.Text.Replace(" ", "");
+            bool SaveEmpty = checkBox1.Checked;
+            war3mapObjects.Write(file, SaveEmpty);
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            string file = comboBox1.Text.Replace(" ", "");
+            if (this.listView10.Items.Count != 0)
+            {
+                if (this.listView10.SelectedItems.Count != 0)
+                {
+                    if (this.listView16.Items.Count != 0)
+                    {
+                        if (this.listView16.SelectedItems.Count != 0)
+                        {
+                            int id = Int32.Parse(listView10.Items[this.listView10.SelectedItems[0].Index].SubItems[0].Text);
+                            int id2 = Int32.Parse(listView16.Items[this.listView16.SelectedItems[0].Index].SubItems[0].Text);
+                            war3mapObjects.FilesList[file].OriginalTable[id].ModsList.Remove(id2);
+                            listView16.Items.Clear();
+                            foreach (int i1 in war3mapObjects.FilesList[file].OriginalTable[id].ModsList.Keys)
+                            {
+                                ListViewItem item = new ListViewItem(i1.ToString());
+                                item.SubItems.Add(war3mapObjects.FilesList[file].OriginalTable[id].ModsList[i1].ModId);
+                                item.SubItems.Add(war3mapObjects.FilesList[file].OriginalTable[id].ModsList[i1].ModValue);
+                                listView16.Items.Add(item);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            string file = comboBox1.Text.Replace(" ", "");
+            if (this.listView15.Items.Count != 0)
+            {
+                if (this.listView15.SelectedItems.Count != 0)
+                {
+                    if (this.listView17.Items.Count != 0)
+                    {
+                        if (this.listView17.SelectedItems.Count != 0)
+                        {
+                            int id = Int32.Parse(listView15.Items[this.listView15.SelectedItems[0].Index].SubItems[0].Text);
+                            int id2 = Int32.Parse(listView17.Items[this.listView17.SelectedItems[0].Index].SubItems[0].Text);
+                            war3mapObjects.FilesList[file].CustomTable[id].ModsList.Remove(id2);
+                            listView17.Items.Clear();
+                            foreach (int i1 in war3mapObjects.FilesList[file].CustomTable[id].ModsList.Keys)
+                            {
+                                ListViewItem item = new ListViewItem(i1.ToString());
+                                item.SubItems.Add(war3mapObjects.FilesList[file].CustomTable[id].ModsList[i1].ModId);
+                                item.SubItems.Add(war3mapObjects.FilesList[file].CustomTable[id].ModsList[i1].ModValue);
+                                listView17.Items.Add(item);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
