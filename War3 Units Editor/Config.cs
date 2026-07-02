@@ -17,7 +17,7 @@ namespace War3_Map_Editor_Tools
         {
             if (File.Exists(AppPath + "\\editor.inf"))
             {
-                IniData File = new FileIniDataParser().ReadFile(AppPath + "\\editor.inf", Encoding.UTF8);
+                IniData File = new FileIniDataParser().ReadFile(AppPath + "\\editor.inf");
                 folderPath = File["Editor"]["MapFolderPath"];
             }
         }

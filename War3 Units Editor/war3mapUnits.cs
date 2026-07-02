@@ -136,6 +136,40 @@ namespace War3_Map_Editor_Tools
             }
             MessageBox.Show("Done.");
         }
+        public static void Add(int player, string id, float x, float y, float z)
+        {
+            UnitsDoo unit = new UnitsDoo();
+            unit.OriginalId = id;
+            unit.variation = 0;
+            unit.PositionX = x;
+            unit.PositionY = y;
+            unit.PositionZ = z;
+            unit.Rotation = 0.0f;
+            unit.ScaleX = 1.0f;
+            unit.ScaleY = 1.0f;
+            unit.ScaleZ = 1.0f;
+            unit.Flags = 2;
+            unit.PlayerNum = player;
+            unit.b1 = 0;
+            unit.b2 = 0;
+            unit.Hit = -1;
+            unit.Mana = -1;
+            unit.DroppedItemSetPointer = -1;
+
+            unit.Gold = 12500;
+            unit.TargetAcquisition = -1;
+            unit.HeroLevel = 1;
+            unit.Strength = 0;
+            unit.Agility = 0;
+            unit.Intelligence = 0;
+
+            unit.RandomFlag = 0;
+            unit.b3 = new byte[] { 0x01, 0x00, 0x00, 0x00 };
+            unit.UnitColor = -1;
+            unit.Waygate = -1;
+            unit.UnitId = List.Keys.LastOrDefault() + 1;//List index 1+
+            List.Add(List.Keys.LastOrDefault() + 1, unit);
+        }
         public static void Add()
         {
             UnitsDoo unit = new UnitsDoo();

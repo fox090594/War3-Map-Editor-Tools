@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using War3_Map_Editor_Tools.UnitsEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using static War3_Map_Editor_Tools.ScriptParser.MapUnits;
 using static War3_Map_Editor_Tools.war3mapUnits;
 
 namespace War3_Map_Editor_Tools
@@ -270,26 +271,16 @@ namespace War3_Map_Editor_Tools
             string hexValue = dwordValue.ToString("X");
             //byte[] bytes = Convert.FromHexString(hexValue);
             //string asciiString = Encoding.ASCII.GetString(bytes);
-            textBox8.Text = HexToAscii(hexValue);//Reverse(HexToAscii(hexValue));
+            textBox8.Text = Converters.HexToAscii(hexValue);//Reverse(HexToAscii(hexValue));
         }
 
 
         public static string GetIDfromwar3map(int input)
         {
             string hexValue = input.ToString("X");
-            return Reverse(HexToAscii(hexValue));
+            return Reverse(Converters.HexToAscii(hexValue));
         }
-        public static string HexToAscii(string hexString)
-        {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < hexString.Length; i += 2)
-            {
-                // Get two characters, convert to base 16 (hex) byte, then to char
-                string hs = hexString.Substring(i, 2);
-                sb.Append(Convert.ToChar(Convert.ToUInt32(hs, 16)));
-            }
-            return sb.ToString();
-        }
+        
         public static string Reverse(string text)
         {
             char[] cArray = text.ToCharArray();
@@ -651,6 +642,34 @@ namespace War3_Map_Editor_Tools
                     }
                 }
             }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string file = openFileDialog1.FileName;
+                Dictionary<int, UnitsCls> list = LoadList(file);
+                if (list.Count > 0)
+                {
+                    foreach (int i1 in list.Keys)
+                    {
+                        war3mapUnits.Add(list[i1].PlayerNum, list[i1].OriginalId, list[i1].PositionX, list[i1].PositionY, list[i1].PositionZ);
+                    }
+                    listView11.Items.Clear();
+                    foreach (int i2 in war3mapUnits.List.Keys)
+                    {
+                        ListViewItem item = new ListViewItem(i2.ToString());
+                        item.SubItems.Add(war3mapUnits.List[i2].OriginalId);
+                        listView11.Items.Add(item);
+                    }
+                }
+            }
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

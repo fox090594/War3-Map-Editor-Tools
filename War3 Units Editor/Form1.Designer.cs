@@ -108,9 +108,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.button16 = new System.Windows.Forms.Button();
             this.textBox37 = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.textBox36 = new System.Windows.Forms.TextBox();
@@ -132,6 +135,7 @@
             this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.button17 = new System.Windows.Forms.Button();
             this.textBox40 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.textBox41 = new System.Windows.Forms.TextBox();
@@ -234,10 +238,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button18 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -973,6 +974,26 @@
             this.tabPage12.Text = "war3map-object";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(1235, 10);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(139, 20);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Save Empty Mods";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1154, 8);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Write";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -1023,6 +1044,16 @@
             this.tabPage15.TabIndex = 0;
             this.tabPage15.Text = "OriginalTable";
             this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(1208, 406);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(136, 23);
+            this.button16.TabIndex = 23;
+            this.button16.Text = "Remove Mod";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // textBox37
             // 
@@ -1206,6 +1237,16 @@
             this.tabPage16.TabIndex = 1;
             this.tabPage16.Text = "CustomTable";
             this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(1208, 412);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(136, 23);
+            this.button17.TabIndex = 31;
+            this.button17.Text = "Remove Mod";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // textBox40
             // 
@@ -1445,6 +1486,7 @@
             // 
             // tabPage14
             // 
+            this.tabPage14.Controls.Add(this.button18);
             this.tabPage14.Controls.Add(this.listView14);
             this.tabPage14.Controls.Add(this.label41);
             this.tabPage14.Controls.Add(this.listView13);
@@ -2088,6 +2130,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // linkLabel1
             // 
@@ -2100,45 +2143,15 @@
             this.linkLabel1.Text = "GitHub";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // button7
+            // button18
             // 
-            this.button7.Location = new System.Drawing.Point(1154, 8);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Write";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(1208, 406);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(136, 23);
-            this.button16.TabIndex = 23;
-            this.button16.Text = "Remove Mod";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(1208, 412);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(136, 23);
-            this.button17.TabIndex = 31;
-            this.button17.Text = "Remove Mod";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1235, 10);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(139, 20);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Save Empty Mods";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.button18.Location = new System.Drawing.Point(338, 754);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(160, 23);
+            this.button18.TabIndex = 63;
+            this.button18.Text = "Add From Script";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // Form1
             // 
@@ -2398,6 +2411,7 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button18;
     }
 }
 
