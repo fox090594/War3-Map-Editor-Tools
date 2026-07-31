@@ -165,6 +165,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.button18 = new System.Windows.Forms.Button();
             this.listView14 = new System.Windows.Forms.ListView();
             this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -238,7 +239,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button18 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -839,6 +840,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.textBox6);
@@ -872,7 +874,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(118, 212);
+            this.label13.Location = new System.Drawing.Point(118, 421);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(42, 16);
             this.label13.TabIndex = 13;
@@ -880,7 +882,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(180, 209);
+            this.textBox6.Location = new System.Drawing.Point(180, 418);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(137, 22);
             this.textBox6.TabIndex = 12;
@@ -888,7 +890,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(118, 172);
+            this.label12.Location = new System.Drawing.Point(118, 381);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 16);
             this.label12.TabIndex = 11;
@@ -896,14 +898,14 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(180, 169);
+            this.textBox5.Location = new System.Drawing.Point(180, 378);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(137, 22);
             this.textBox5.TabIndex = 10;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(180, 124);
+            this.textBox4.Location = new System.Drawing.Point(180, 333);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(137, 22);
             this.textBox4.TabIndex = 9;
@@ -911,7 +913,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(118, 127);
+            this.label11.Location = new System.Drawing.Point(118, 336);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 16);
             this.label11.TabIndex = 8;
@@ -923,6 +925,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(640, 22);
             this.textBox3.TabIndex = 7;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label10
             // 
@@ -1551,6 +1554,16 @@
             this.tabPage14.Text = "war3mapUnits.doo";
             this.tabPage14.UseVisualStyleBackColor = true;
             // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(338, 754);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(160, 23);
+            this.button18.TabIndex = 63;
+            this.button18.Text = "Add From Script";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // listView14
             // 
             this.listView14.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -2143,15 +2156,14 @@
             this.linkLabel1.Text = "GitHub";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // button18
+            // textBox7
             // 
-            this.button18.Location = new System.Drawing.Point(338, 754);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(160, 23);
-            this.button18.TabIndex = 63;
-            this.button18.Text = "Add From Script";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.textBox7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
+            this.textBox7.Location = new System.Drawing.Point(180, 156);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(640, 22);
+            this.textBox7.TabIndex = 15;
             // 
             // Form1
             // 
@@ -2412,6 +2424,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }
 

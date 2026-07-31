@@ -671,5 +671,24 @@ namespace War3_Map_Editor_Tools
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            string txt = textBox3.Text;
+            if(txt.Contains("|c"))
+            {
+                string color = txt.Substring(4, 6).ToUpper();
+                byte r = Convert.ToByte(color.Substring(0, 2), 16);
+                byte g = Convert.ToByte(color.Substring(2, 2), 16);
+                byte b = Convert.ToByte(color.Substring(4, 2), 16);
+                textBox7.ForeColor = Color.FromArgb(r, g, b);
+                txt = txt.Substring(10, txt.Length - 10);
+            }
+            else
+            {
+                //textBox7.ForeColor = Color.Black;
+            }
+            textBox7.Text = txt;
+        }
     }
 }
