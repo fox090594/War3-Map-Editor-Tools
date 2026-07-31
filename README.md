@@ -3,7 +3,7 @@ Release section: [Link](	/../../tree/main/War3%20Units%20Editor/bin/Release).
 
 ## Functions
  * w3x Files Renamer
- * war3mapUnits.doo Editor
+ * war3mapUnits.doo Editor and import from war3map.j
  * Objects Editor
  * SLK Editor 
 
