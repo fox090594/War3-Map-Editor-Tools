@@ -95,6 +95,8 @@
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button19 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -239,7 +241,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -840,6 +844,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label54);
+            this.tabPage1.Controls.Add(this.textBox44);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.button19);
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.label13);
@@ -861,9 +869,29 @@
             this.tabPage1.Text = "w3x ReNamer";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(441, 451);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(146, 23);
+            this.button19.TabIndex = 16;
+            this.button19.Text = "Choose color";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
+            this.textBox7.Location = new System.Drawing.Point(180, 423);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(640, 22);
+            this.textBox7.TabIndex = 15;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(995, 241);
+            this.button5.Location = new System.Drawing.Point(995, 324);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(90, 23);
             this.button5.TabIndex = 14;
@@ -874,7 +902,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(118, 421);
+            this.label13.Location = new System.Drawing.Point(118, 212);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(42, 16);
             this.label13.TabIndex = 13;
@@ -882,7 +910,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(180, 418);
+            this.textBox6.Location = new System.Drawing.Point(180, 209);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(137, 22);
             this.textBox6.TabIndex = 12;
@@ -890,7 +918,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(118, 381);
+            this.label12.Location = new System.Drawing.Point(118, 172);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 16);
             this.label12.TabIndex = 11;
@@ -898,14 +926,14 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(180, 378);
+            this.textBox5.Location = new System.Drawing.Point(180, 169);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(137, 22);
             this.textBox5.TabIndex = 10;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(180, 333);
+            this.textBox4.Location = new System.Drawing.Point(180, 124);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(137, 22);
             this.textBox4.TabIndex = 9;
@@ -913,7 +941,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(118, 336);
+            this.label11.Location = new System.Drawing.Point(118, 127);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 16);
             this.label11.TabIndex = 8;
@@ -2156,14 +2184,32 @@
             this.linkLabel1.Text = "GitHub";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // textBox7
+            // textBox44
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(180, 156);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(640, 22);
-            this.textBox7.TabIndex = 15;
+            this.textBox44.Location = new System.Drawing.Point(262, 451);
+            this.textBox44.Name = "textBox44";
+            this.textBox44.Size = new System.Drawing.Size(137, 22);
+            this.textBox44.TabIndex = 18;
+            this.textBox44.Text = "000000";
+            this.textBox44.TextChanged += new System.EventHandler(this.textBox44_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(187, 454);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 16);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Hex Color:";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(177, 404);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(97, 16);
+            this.label54.TabIndex = 19;
+            this.label54.Text = "Name preview:";
             // 
             // Form1
             // 
@@ -2425,6 +2471,10 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.TextBox textBox44;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label54;
     }
 }
 

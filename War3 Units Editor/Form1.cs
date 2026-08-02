@@ -15,6 +15,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using War3_Map_Editor_Tools.UnitsEditor;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using static War3_Map_Editor_Tools.ScriptParser.MapUnits;
 using static War3_Map_Editor_Tools.war3mapUnits;
@@ -675,20 +677,63 @@ namespace War3_Map_Editor_Tools
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             string txt = textBox3.Text;
-            if(txt.Contains("|c"))
+            if (txt.Length > 10)
             {
-                string color = txt.Substring(4, 6).ToUpper();
-                byte r = Convert.ToByte(color.Substring(0, 2), 16);
-                byte g = Convert.ToByte(color.Substring(2, 2), 16);
-                byte b = Convert.ToByte(color.Substring(4, 2), 16);
-                textBox7.ForeColor = Color.FromArgb(r, g, b);
-                txt = txt.Substring(10, txt.Length - 10);
+                if (txt.Substring(0, 4) == "|cff")
+                {
+                    string color = txt.Substring(4, 6).ToUpper();
+                    textBox44.Text = color;
+                    //byte r = Convert.ToByte(color.Substring(0, 2), 16);
+                    //byte g = Convert.ToByte(color.Substring(2, 2), 16);
+                    //byte b = Convert.ToByte(color.Substring(4, 2), 16);
+                    //textBox7.ForeColor = Color.FromArgb(r, g, b);
+                    txt = txt.Substring(10, txt.Length - 10);
+                }
             }
             else
             {
                 //textBox7.ForeColor = Color.Black;
             }
             textBox7.Text = txt;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            cd.AllowFullOpen = true;
+            cd.FullOpen = true;
+            string color = textBox44.Text.ToUpper();
+            byte r = Convert.ToByte(color.Substring(0, 2), 16);
+            byte g = Convert.ToByte(color.Substring(2, 2), 16);
+            byte b = Convert.ToByte(color.Substring(4, 2), 16);
+            cd.Color = Color.FromArgb(r, g, b);
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                Color selectedColor = cd.Color;
+                /*string hexColor = ColorTranslator.ToHtml(selectedColor);
+                if(hexColor.Contains("#"))
+                {
+                    textBox44.Text = hexColor.Replace("#", "").ToLower();
+                }*/
+                string hexColor = $"{selectedColor.R:X2}{selectedColor.G:X2}{selectedColor.B:X2}";
+                textBox44.Text = hexColor.Replace("#", "").ToLower();
+                textBox3.Text = "|cff" + textBox44.Text + textBox7.Text;
+            }
+        }
+
+        private void textBox44_TextChanged(object sender, EventArgs e)
+        {
+            string color = textBox44.Text.ToUpper();
+            byte r = Convert.ToByte(color.Substring(0, 2), 16);
+            byte g = Convert.ToByte(color.Substring(2, 2), 16);
+            byte b = Convert.ToByte(color.Substring(4, 2), 16);
+
+            textBox7.ForeColor = Color.FromArgb(r, g, b);
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,8 +6,10 @@ using System.Windows.Forms;
 
 namespace War3_Map_Editor_Tools
 {
-    internal static class Program
+    public static class Program
     {
+        public static Form1 frm1;
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +18,7 @@ namespace War3_Map_Editor_Tools
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(frm1 = new Form1());
         }
     }
 }
